@@ -1,5 +1,5 @@
 <?
-	include "config.php"
+	include "config.php";
 
 	$handle = new mysqli($host, $username, $password);
 	$handle->select_db($db_name);

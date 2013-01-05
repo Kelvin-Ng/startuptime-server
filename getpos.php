@@ -1,5 +1,5 @@
 <?
-	include "config.php"
+	include "config.php";
 
 	$time = $_GET['time'];
 	$mac = $_GET['mac'];
