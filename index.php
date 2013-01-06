@@ -7,7 +7,7 @@
 		<table>
 			<tr>
 				<td>Rank</td>
-				<td>Boot Time</td>
+				<td>Boot Time (s)</td>
 			</tr>
 <?
 	include "config.php";
@@ -22,7 +22,7 @@
 ?>
 			<tr>
 				<td><? echo $i?></td>
-				<td><? echo $time[0]?></td>
+				<td><? echo $row[0]?></td>
 			</tr>
 <?
 	}
