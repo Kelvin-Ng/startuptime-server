@@ -1,0 +1,24 @@
+h1
+{
+	text-align: center;
+	color: #660099;
+	font-family: sans-serif;
+}
+
+.table_head
+{
+	background-color: #003300;
+	color: white;
+	font-weight: bold;
+}
+
+.table_row_odd
+{
+	background-color: #CCFF99;
+}
+
+.table_row_even
+{
+	background-color: #CCFFFF;
+}
+
