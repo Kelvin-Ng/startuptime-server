@@ -22,7 +22,7 @@
 ?>
 			<tr>
 				<td><? echo $i?></td>
-				<td><? echo $time[i][0]?></td>
+				<td><? echo $time[0]?></td>
 			</tr>
 <?
 	}
