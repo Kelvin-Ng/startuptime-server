@@ -1,11 +1,12 @@
 <html>
 	<head>
 		<title>StartUpTime Server</title>
+		<link rel="stylesheet" href="index.css">
 	</head>
 	<body>
 		<h1>StartUpTime Server</h1>
-		<table>
-			<tr>
+		<table align="center">
+			<tr class="table_head">
 				<td>Rank</td>
 				<td>Boot Time (s)</td>
 			</tr>
@@ -20,7 +21,7 @@
 	{
 		$i++;
 ?>
-			<tr>
+			<tr class="<? echo $i % 2 ? "table_row_odd" : "table_row_even" ?>">
 				<td><? echo $i?></td>
 				<td><? echo $row[0]?></td>
 			</tr>
