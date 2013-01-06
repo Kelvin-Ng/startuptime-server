@@ -16,12 +16,12 @@
 	$handle->select_db($db_name);
 	$result = $handle->query(
 		"select distinct time from time order by time asc");
-	$time = $result->fetch_row();
-	for ($i = 0; i < $result->num_rows; $i++)
+	while ($row = $result->fetch_row())
 	{
+		$i++;
 ?>
 			<tr>
-				<td><? echo $i + 1 ?></td>
+				<td><? echo $i?></td>
 				<td><? echo $time[i][0]?></td>
 			</tr>
 <?
