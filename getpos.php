@@ -16,19 +16,19 @@
 	else
 	{
 		$last_time = $result->fetch_row();
-		if ($time < $last_time[1])
+		if ($time < $last_time[0])
 			$handle->query(
 			"UPDATE time SET time = $time WRERE mac = '$mac'");
 	}
 	
 	$result = $handle->query(
-		"SELECT COUNT(*) FROM time WHERE time < $time AND mac != $mac");
+		"SELECT COUNT(*) FROM time WHERE time < $time AND mac != '$mac'");
 	$row = $result->fetch_row();
 	$result->free();
 	$pos = $row[0] + 1;
 
 	$result = $handle->query(
-		"SELECT COUNT(*) FROM time WHERE mac != $mac");
+		"SELECT COUNT(*) FROM time WHERE mac != '$mac'");
 	$row = $result->fetch_row();
 	$result->free();
 	$num = $row[0];
