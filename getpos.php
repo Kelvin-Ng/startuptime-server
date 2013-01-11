@@ -28,7 +28,7 @@
 	$pos = $row[0] + 1;
 
 	$result = $handle->query(
-		"SELECT COUNT(*) FROM time WHERE mac != '$mac'");
+		"SELECT COUNT(*) FROM time");
 	$row = $result->fetch_row();
 	$result->free();
 	$num = $row[0];
