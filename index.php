@@ -11,17 +11,19 @@
 				<td>Boot Time (s)</td>
 			</tr>
 <?
-	include "config.php";
+	include 'config.php';
 
 	$handle = new mysqli($host, $username, $password);
 	$handle->select_db($db_name);
 	$result = $handle->query(
-		"select distinct time from time order by time asc");
+		'SELECT DISTINCT time FROM times ORDER BY time ASC');
+
+	$i = 0;
 	while ($row = $result->fetch_row())
 	{
 		$i++;
 ?>
-			<tr class="<? echo $i % 2 ? "table_row_odd" : "table_row_even" ?>">
+			<tr class="<? echo $i % 2 ? 'table_row_odd' : 'table_row_even' ?>">
 				<td><? echo $i?></td>
 				<td><? echo $row[0]?></td>
 			</tr>
